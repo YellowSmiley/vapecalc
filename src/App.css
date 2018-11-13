@@ -1,32 +1,100 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+header {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #ff8424;
+  font-weight: 700;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.panel-header {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: #ff8424;
+  font-weight: 700;
+}
+
+.wrapper {
+  background-color: white;
+}
+
+form {
+  width: 100%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+
+form p {
+  width: 100%;
+  margin: 0;
+}
+
+form p label {
+  display: block;
+}
+
+form p input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.results {
+  background-color: white;
+}
+
+.results table {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-collapse: collapse;
+}
+
+.results table td,
+.results table th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.results table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #ff8424;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 700px) {
+  .panel-header {
+    width: 80%;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1 1;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .results {
+    width: 80%;
+    margin: 0 auto;
   }
 }
