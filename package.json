@@ -2,6 +2,7 @@
   "name": "e-liquid-calculator-app",
   "productName": "e-Liquid Calculator",
   "description": "Application for calculating e-Liquids",
+  "author": "Mike Smith",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,8 +18,19 @@
     "eject": "react-scripts eject",
     "electron": "electron .",
     "dev": "nf start",
-    "package-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=src/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"e-Liquid Calculator\"",
-    "create-installer-win": "node installers/windows/createinstaller.js"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.e-liquid-calculator-app",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "directories": {
+      "buildResources": "public"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,9 +43,8 @@
   ],
   "devDependencies": {
     "electron": "^3.0.9",
-    "electron-packager": "^12.2.0",
-    "electron-winstaller": "^2.7.0",
-    "foreman": "^3.0.1"
+    "foreman": "^3.0.1",
+    "electron-builder": "^20.34.0"
   },
   "homepage": "./"
 }
