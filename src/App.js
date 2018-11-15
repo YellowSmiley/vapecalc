@@ -124,9 +124,7 @@ class App extends Component {
               <input
                 id="nicotineBasePgRatio"
                 value={this.state.nicotineBasePgRatio}
-                onChange={e =>
-                  this.setState({ nicotineBasePgRatio: e.target.value })
-                }
+                onChange={e => this.handleNicotineBasePgRatioChange(e)}
               />
             </p>
             <p>
@@ -136,9 +134,7 @@ class App extends Component {
               <input
                 id="nicotineBaseVgRatio"
                 value={this.state.nicotineBaseVgRatio}
-                onChange={e =>
-                  this.setState({ nicotineBaseVgRatio: e.target.value })
-                }
+                onChange={e => this.handleNicotineBaseVgRatioChange(e)}
               />
             </p>
             <p>
