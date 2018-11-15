@@ -26,6 +26,22 @@ class App extends Component {
     this.setState({ vgRatio: e.target.value, pgRatio: newPgRatio });
   }
 
+  handleNicotineBasePgRatioChange(e) {
+    const newNicotineBaseVgRatio = 100 - e.target.value;
+    this.setState({
+      nicotineBasePgRatio: e.target.value,
+      nicotineBaseVgRatio: newNicotineBaseVgRatio
+    });
+  }
+
+  handleNicotineBaseVgRatioChange(e) {
+    const newNicotineBasePgRatio = 100 - e.target.value;
+    this.setState({
+      nicotineBaseVgRatio: e.target.value,
+      nicotineBasePgRatio: newNicotineBasePgRatio
+    });
+  }
+
   render() {
     const amountOfNicotine =
       (this.state.desiredNicotineStrength / this.state.nicotineBaseStrength) *
