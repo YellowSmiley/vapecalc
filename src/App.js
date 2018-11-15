@@ -102,7 +102,7 @@ class App extends Component {
               />
             </p>
             <p>
-              <label htmlFor="amountToMake">Amount to Make</label>
+              <label htmlFor="amountToMake">Amount to Make (ml)</label>
               <input
                 id="amountToMake"
                 value={this.state.amountToMake}
